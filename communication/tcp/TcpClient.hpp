@@ -26,7 +26,7 @@
 #ifndef TCP_CLIENT_H
 #define TCP_CLIENT_H
 
-#include "basicIoDevice.hpp"
+#include "BasicIoDevice.hpp"
 
 class TcpClient
     : public BasicIoObject_t<boost::asio::ip::tcp::socket>

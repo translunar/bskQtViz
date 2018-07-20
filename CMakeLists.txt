@@ -151,7 +151,23 @@ elseif(APPLE)
             ${CMAKE_SOURCE_DIR}/external/boost_1_61_0/lib/libboost_thread.dylib
     )
 else()
-    message(FATAL_ERROR "Only WIN32 and APPLE systems are currently supported")
+    find_package(ASSIMP REQUIRED)
+    include_directories(${ASSIMP_INCLUDE_DIRS})
+    link_directories(${ASSIMP_LIBRARY_DIRS})
+    add_definitions(${ASSIMP_DEFINITIONS})
+
+    find_package(Boost COMPONENTS filesystem system serialization thread REQUIRED)
+    include_directories(${Boost_INCLUDE_DIR})
+  
+    set(library_dependencies
+      ${Qt5Widgets_LIBRARIES}
+      ${ASSIMP_LIBRARIES}
+      ${CMAKE_SOURCE_DIR}/external/cspice/lib/cspice.a
+      ${Boost_LIBRARIES}
+    )
+
+    set (CMAKE_CXX_STANDARD 11)
+  
 endif()
 
 # Add compiler flags 

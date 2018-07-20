@@ -26,7 +26,7 @@
 #ifndef SERIAL_CONNECTION_H
 #define SERIAL_CONNECTION_H
 
-#include "basicIoDevice.hpp"
+#include "BasicIoDevice.hpp"
 
 #define SERIAL_BAUD_RATE 115200
 

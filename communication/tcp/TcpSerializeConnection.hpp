@@ -26,7 +26,7 @@
 #ifndef TCP_SERIALIZE_CONNECTION_HPP
 #define TCP_SERIALIZE_CONNECTION_HPP
 
-#include "basicIoDevice.hpp"
+#include "BasicIoDevice.hpp"
 
 #include <boost/tuple/tuple.hpp>
 #include <boost/archive/text_iarchive.hpp>

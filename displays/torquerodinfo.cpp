@@ -19,7 +19,7 @@
 #include "torquerodinfo.h"
 #include "ui_torquerodinfo.h"
 #include "math.h"
-#include "enumconversions.h"
+#include "enumConversions.h"
 
 TorqueRodInfo::TorqueRodInfo(QWidget *parent) :
     QDockWidget(parent),

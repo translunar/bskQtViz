@@ -26,7 +26,7 @@
 #ifndef UDP_CLIENT_H
 #define UDP_CLIENT_H
 
-#include "basicIoDevice.hpp"
+#include "BasicIoDevice.hpp"
 
 class UdpClient
     : public BasicIoObject_t<boost::asio::ip::udp::socket>
