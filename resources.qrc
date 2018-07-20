@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/images/AVSlogo5-Large.png</file>
+        <file>resources/images/Basilisk-Logo.png</file>
+        <file>shaders/lightingFragmentShader.glsl</file>
+        <file>shaders/lightingVertexShader.glsl</file>
+        <file>resources/images/testCube.png</file>
+        <file>resources/images/default.png</file>
+        <file>shaders/watermarkVertexShader.glsl</file>
+        <file>shaders/watermarkFragmentShader.glsl</file>
+        <file>resources/images/fadex.png</file>
+        <file>resources/images/thrusterFadex.png</file>
+        <file>defaultStyle.qss</file>
+    </qresource>
+</RCC>

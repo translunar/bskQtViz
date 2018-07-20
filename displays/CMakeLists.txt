@@ -1,0 +1,56 @@
+# Specify the version used
+cmake_minimum_required(VERSION 3.0.2)
+
+# Add source files
+add_sources(
+    CMakeLists.txt
+    playbackcontrols.h
+    playbackcontrols.cpp
+    playbackcontrols.ui
+    ScientificSpinBox.cpp
+    ScientificSpinBox.h
+    orbitelementsinfo.cpp
+    orbitelementsinfo.h
+    orbitelementsinfo.ui
+    reactionwheelsinfo.cpp
+    reactionwheelsinfo.h
+    reactionwheelsinfo.ui
+    simtimeinfo.cpp
+    simtimeinfo.h
+    simtimeinfo.ui
+    cssinfo.cpp
+    cssinfo.h
+    cssinfo.ui
+    angularratesinfo.cpp
+    angularratesinfo.h
+    angularratesinfo.ui
+    controlstateinfo.cpp
+    controlstateinfo.h
+    controlstateinfo.ui
+    torquerodinfo.cpp
+    torquerodinfo.h
+    torquerodinfo.ui
+    thrustersinfo.cpp
+    thrustersinfo.h
+    thrustersinfo.ui
+    totalpowerinfo.cpp
+    totalpowerinfo.h
+    totalpowerinfo.ui
+    graphics.cpp
+    graphics.h
+    modelsdisplayinfo.cpp
+    modelsdisplayinfo.h
+    modelsdisplayinfo.ui
+    podinfo.cpp
+    podinfo.h
+    podinfo.ui
+    iruinfo.cpp
+    iruinfo.h
+    iruinfo.ui
+    taminfo.cpp
+    taminfo.h
+    taminfo.ui
+    startrackerinfo.cpp
+    startrackerinfo.h
+    startrackerinfo.ui
+)

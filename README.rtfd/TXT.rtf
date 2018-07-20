@@ -1,0 +1,78 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww17340\viewh14480\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+Basilisk Visualization Installation Instructions\
+
+\fs22 \
+\
+MacOS
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+This Document describes how to set up an IDE to develop and run the spacecraft\
+ADCS simulation visualization code on \
+- INTEL MAC computers using MAC OS-X operating system and XCODE\
+\
+1. Open CMake\
+2. Browse and select the source directory\
+3. Browse and select the build directory. For convenience this should be in a directory named \'93build\'94 located inside the top level of the visualization directory.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic screen1.png \width10880 \height8570
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+4. Click configure. You will be ask to choose a Generator for this project. Select \'91Xcode\'92. Leave all other options unchanged. Click \'91Done\'92.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic screen2.png \width7280 \height4940
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+5. CMake will output an error requiring the CMAKE_PREFIX_PATH variable to be set for QT. This is done by browsing to the location of your Qt install and selecting the cmake directory. It is often at a path similar to \'93/Users/<your username>/Qt/5.8/clang_64/lib/cmake\'94.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic screen3.png \width10880 \height8570
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+6. Click configure again so that the CMAKE_PREFIX_PATH variable takes effect and the remainder of the build can be configured. A successful configuration will show at the last line of CMake log window \'93Configuring done\'94.\
+\
+7. Click Generate to create a project for you IDE (Xcode). When complete CMake will output in the log window \'93Generating done\'94. You can now close CMake.\
+\
+8. Navigate to the project build directory you created at <path to basilisk vis>/build. Run the project by opening the .xcodeproj file.\
+\
+9. Build the project. The path to the data libraries (spice etc.) must be passed to the executable as a command line parameter with the toggle \'93-d\'94. It is convenient to set this parameter in the build scheme by navigating to \'93Product >> Scheme >> Edit Scheme\'94 ensuring that you have the executable scheme selected. In the \'93Arguments\'94 tab click the \'93+\'94 symbol to add an argument to be passed on launch a enter \'93-d <path to data directory in visualization project directory>\'94. For example a common argument string looks like: -d "/Users/patrick/Documents/SoftwareDevelopment/BasiliskVis/data"\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic screen4.png \width6140 \height4940
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic screen5.png \width13920 \height8850
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+10. Build and run.\
+\
+11. To connect to a visualization either select \'93File >> Open Connection\'94 or use the short cut CMD-o. The default IP and port should be used if you are attempting to connect to t simulation running on the same machine.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic screen6.png \width3010 \height2760
+}¬}\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf2 \expnd0\expndtw0\kerning0
+12. Use the View and Panels menus to setup basic diagnostic panel arrangements.  \
+\
+13. select \'93View/Bottom Playback Controls\'94 to make the simulation speedup panel visible.
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+}

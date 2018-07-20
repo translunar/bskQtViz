@@ -1,0 +1,285 @@
+<?xml version='1.0'?>
+<ui version="4.0">
+ <class>TotalPowerInfo</class>
+ <widget class="QDockWidget" name="TotalPowerInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>101</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>200</width>
+    <height>101</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ActionsContextMenu</enum>
+  </property>
+  <property name="allowedAreas">
+   <set>Qt::RightDockWidgetArea| Qt::LeftDockWidgetArea</set>
+  </property>
+  <property name="features">
+   <set>QDockWidget::NoDockWidgetFeatures</set>
+   <set>QDockWidget::DockWidgetMovable</set>
+  </property>
+  <property name="windowTitle">
+   <string>Power Summary</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>398</width>
+         <height>87</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="totalPowerGroup">
+          <layout class="QVBoxLayout" name="totPowerLayout">
+          </layout>
+         </widget>
+        </item>
+        <item>
+        <widget class="QGroupBox" name="verboseGroup">
+         <property name="title">
+          <string>Verbose</string>
+         </property>
+          <layout class = "QGridLayout" name="infoGrid">
+           <item row="0" column="0">
+            <widget class="QLabel" name="rwLabel">
+             <property name="text">
+              <string>Reaction Wheel Group</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeft</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="rwPower">
+             <property name="text">
+              <string> 0 W</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight</set>
+             </property>
+            </widget>
+           </item>
+        <item row="1" column="0">
+        <widget class="QLabel" name="rwSubLabel_1">
+        <property name="alignment">
+        <set>Qt::AlignLeft</set>
+        </property>
+        </widget>
+        </item>
+        <item row="1" column="1">
+        <widget class="QLabel" name="rwSubPower_1">
+        <property name="alignment">
+        <set>Qt::AlignRight</set>
+        </property>
+        </widget>
+        </item>
+        <item row="2" column="0">
+        <widget class="QLabel" name="rwSubLabel_2">
+        <property name="alignment">
+        <set>Qt::AlignLeft</set>
+        </property>
+        </widget>
+        </item>
+        <item row="2" column="1">
+        <widget class="QLabel" name="rwSubPower_2">
+        <property name="alignment">
+        <set>Qt::AlignRight</set>
+        </property>
+        </widget>
+        </item>
+        <item row="3" column="0">
+        <widget class="QLabel" name="rwSubLabel_3">
+        <property name="alignment">
+        <set>Qt::AlignLeft</set>
+        </property>
+        </widget>
+        </item>
+        <item row="3" column="1">
+        <widget class="QLabel" name="rwSubPower_3">
+        <property name="alignment">
+        <set>Qt::AlignRight</set>
+        </property>
+        </widget>
+        </item>
+        <item row="4" column="0">
+        <widget class="QLabel" name="blank"/>
+        </item>
+        <item row="5" column="0">
+        <widget class="QLabel" name="trLabel">
+        <property name="text">
+        <string>Torque Rods Group</string>
+        </property>
+        <property name="alignment">
+        <set>Qt::AlignLeft</set>
+        </property>
+        </widget>
+        </item>
+        <item row="5" column="1">
+        <widget class="QLabel" name="trPower">
+        <property name="text">
+        <string> 0 W</string>
+        </property>
+        <property name="alignment">
+        <set>Qt::AlignRight</set>
+        </property>
+        </widget>
+        </item>
+        <item row="6" column="0">
+        <widget class="QLabel" name="blank"/>
+        </item>
+        <item row="7" column="0">
+        <widget class="QLabel" name="stLabel">
+        <property name="text">
+        <string>Star Tracker</string>
+        </property>
+        <property name="alignment">
+        <set>Qt::AlignLeft</set>
+        </property>
+        </widget>
+        </item>
+        <item row="7" column="1">
+        <widget class="QLabel" name="stPower">
+        <property name="text">
+        <string> 0 W</string>
+        </property>
+        <property name="alignment">
+        <set>Qt::AlignRight</set>
+        </property>
+        </widget>
+        </item>
+        </layout>
+        </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="chartGroup">
+          <property name="title">
+           <string>Distribution Bar</string>
+          </property>
+          <layout class="QVBoxLayout" name="pieChartLayout">
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionTotalPower">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Total Power</string>
+   </property>
+  </action>
+  <action name="actionVerbose_DisplayNew">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Verbose</string>
+   </property>
+  </action>
+  <action name="actionPieChart">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Distribution Bar</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionTotalPower</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>totalPowerGroup</receiver>
+   <slot>setVisible(bool)</slot>
+  </connection>
+  <connection>
+   <sender>actionPieChart</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chartGroup</receiver>
+   <slot>setVisible(bool)</slot>
+  </connection>
+  <connection>
+   <sender>actionVerbose_DisplayNew</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>verboseGroup</receiver>
+   <slot>setVisible(bool)</slot>
+  </connection>
+ </connections>
+</ui>
